@@ -1,0 +1,12 @@
+import React from 'react'
+
+const Aboutus = () => {
+  return (
+    <div>
+      <h1 className=' flex justify-center items-center font-bold text-2xl text-green-700'>About Us</h1>
+      <h2 className=' p-10 px-28'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus amet magnam expedita ipsa cumque est iure vel, voluptatem molestias in, quod velit deserunt ipsum debitis autem blanditiis minima maxime ut dolorem ex eveniet nihil quas. Fugit et dolorum error illum autem reiciendis? Inventore culpa et error obcaecati deserunt minima adipisci quibusdam sit quam similique molestias veniam commodi velit sequi, eveniet, magnam nesciunt optio in quae, iusto totam esse? Earum aliquam ut delectus dolorum repellendus quibusdam vel enim ex laborum velit aut porro asperiores, voluptate possimus deleniti a molestias fugiat doloremque aliquid officiis vitae nobis, dignissimos ratione. Consequatur ut aspernatur quidem, illum, corrupti dicta excepturi officiis blanditiis, doloribus eos non libero exercitationem? Aliquid, neque itaque vero repudiandae commodi nam numquam. Pariatur ducimus, voluptas sunt, nobis dolores dolor tempore dignissimos a minus vitae tenetur necessitatibus recusandae ipsum! Commodi error fuga dignissimos placeat rerum molestias quam blanditiis ipsum. Atque quisquam eveniet iure inventore, rerum aspernatur voluptates provident ratione velit itaque facilis eaque dolores distinctio voluptatem! Odio sunt officiis aspernatur vero voluptas qui, amet sit tenetur labore deserunt enim harum facilis perspiciatis aperiam natus doloribus porro perferendis nisi exercitationem accusantium assumenda tempore laborum dolore! Ullam laboriosam quam, deserunt maxime voluptatem unde maiores! Dolores odio sed sapiente commodi, harum nobis ipsa molestiae quod? Beatae quae nulla quasi officiis magnam modi ipsum cupiditate ex eaque, libero quod optio tenetur esse soluta. Libero iusto eaque corrupti aperiam eius harum obcaecati tenetur doloribus fuga ducimus? Quasi illo, suscipit corporis culpa iste ut placeat at repellat dicta odit, fuga ipsa labore similique reprehenderit! Temporibus ut deserunt sit illum adipisci veritatis aspernatur, illo facilis laborum itaque quia nemo tempora! Ratione ipsa officiis modi alias, quia expedita laborum nesciunt eos laboriosam corporis. Unde ut alias perspiciatis deserunt optio quibusdam repellendus vitae eum iure voluptates obcaecati, iste laborum quasi explicabo sed assumenda.</h2>
+    </div>
+  )
+}
+
+export default Aboutus
