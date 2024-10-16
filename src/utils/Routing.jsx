@@ -6,6 +6,8 @@ import Foodblog from '../pages/Foodblog'
 import Contactus from '../pages/Contactus'
 import Login from '../pages/Login'
 import Signup from '../pages/Signup'
+import FoodServiceListing from '../pages/FoodServiceListing'
+import MealSummaryForm from '../pages/MealSummaryForm'
 
 const Routing = () => {
   return (
@@ -17,6 +19,8 @@ const Routing = () => {
             <Route path='/contactus' element={<Contactus/>}></Route>
             <Route path='/login' element={<Login/>}></Route>
             <Route path='/signup' element={<Signup/>}></Route>
+            <Route path='/foodservicelisting' element={<FoodServiceListing/>}></Route>
+            <Route path='/mealsummary' element={<MealSummaryForm/>}></Route>
         </Routes>
     </div>
   )

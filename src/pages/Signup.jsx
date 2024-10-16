@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom';
 
 const Signup = () => {
  // State for email and password
@@ -93,6 +94,9 @@ return (
           Sign In
         </button>
       </form>
+      <div className="mt-4">
+          <p className="text-gray-600">Already have an account? <NavLink to="/login" className="text-green-500 hover:underline">Login here</NavLink> .</p>
+        </div>
       
     </div>
   </div>

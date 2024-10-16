@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Card = () => {
   const data = [
@@ -9,26 +10,28 @@ const Card = () => {
 
   return (
     <>
-      <div className="flex justify-center pb-4">
-        <button className=" w-60 h-14 text-white rounded-2xl bg-green-600 font-semibold text-xl">
+      <div className="flex justify-center pb-3">
+        <button className="mt-8 mb-6 w-48 h-12 text-white rounded-xl bg-green-600 font-semibold text-lg">
           Online Order
         </button>
       </div>
-      <div className="flex flex-col md:flex-row justify-center items-center md:items-stretch">
+      <div className="flex flex-col md:flex-row justify-center items-center md:items-stretch gap-16">
         {data.map((elem, index) => (
           <div
             key={index}
-            className="px-6 md:px-4 lg:px-6 pt-5 w-full md:w-1/3 h-auto"
+            className="w-full md:w-1/4 max-w-xs"
           >
-            <div className="h-[250px] md:h-[300px] lg:h-[350px] rounded-t-md overflow-hidden">
+            <div className="h-[200px] rounded-t-md overflow-hidden">
               <img
                 src={elem.img}
                 className="h-full w-full object-cover"
+                
                 alt={elem.name}
               />
             </div>
-            <button className=" text-lg md:text-xl lg:text-2xl flex justify-center items-center bg-green-600 h-12 md:h-14 border-r-black text-white rounded-b-md w-full">
-              {elem.name}
+            <button className="text-base md:text-lg flex justify-center items-center bg-green-600 h-10 text-white rounded-b-md w-full">
+              
+              <NavLink to="/foodservicelisting">{elem.name}</NavLink>
             </button>
           </div>
         ))}
