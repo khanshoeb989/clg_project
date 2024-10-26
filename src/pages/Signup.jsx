@@ -97,6 +97,9 @@ return (
       <div className="mt-4">
           <p className="text-gray-600">Already have an account? <NavLink to="/login" className="text-green-500 hover:underline">Login here</NavLink> .</p>
         </div>
+        <div className="mt-4">
+          <p className="text-gray-600">Sign Up as Dabba wala? <NavLink to="/signupdabba" className="text-green-500 hover:underline">Sign up here</NavLink> .</p>
+        </div>
       
     </div>
   </div>

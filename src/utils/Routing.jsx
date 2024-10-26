@@ -8,6 +8,8 @@ import Login from '../pages/Login'
 import Signup from '../pages/Signup'
 import FoodServiceListing from '../pages/FoodServiceListing'
 import MealSummaryForm from '../pages/MealSummaryForm'
+import LoginDabba from '../pages/LoginDabba'
+import SignupDabba from '../pages/SignupDabba'
 
 const Routing = () => {
   return (
@@ -21,6 +23,9 @@ const Routing = () => {
             <Route path='/signup' element={<Signup/>}></Route>
             <Route path='/foodservicelisting' element={<FoodServiceListing/>}></Route>
             <Route path='/mealsummary' element={<MealSummaryForm/>}></Route>
+            <Route path='/logindabba' element={<LoginDabba/>}></Route>
+            <Route path='/signupdabba' element={<SignupDabba/>}></Route>
+            
         </Routes>
     </div>
   )

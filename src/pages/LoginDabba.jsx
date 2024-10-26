@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
-const Login = () => {
+const LoginDabba = () => {
   // State for email and password
   const [formData, setFormData] = useState({
     email: '',
@@ -41,7 +41,7 @@ const Login = () => {
               value={formData.email}
               onChange={handleChange}
               className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-              placeholder="Enter your email"
+              placeholder="Enter your Id"
               required
             />
           </div>
@@ -69,14 +69,12 @@ const Login = () => {
           </button>
         </form>
         <div className="mt-4">
-          <p className="text-gray-600">Don't have an account? <NavLink to="/signup" className="text-green-500 hover:underline">Sign up here</NavLink> .</p>
+          <p className="text-gray-600">Don't have an account? <NavLink to="/signupdabba" className="text-green-500 hover:underline">Sign up here</NavLink> .</p>
         </div>
-        <div className="mt-4">
-          <p className="text-gray-600">Login as Dabba wala? <NavLink to="/logindabba" className="text-green-500 hover:underline">Login  here</NavLink> .</p>
-        </div>
+        
       </div>
     </div>
   );
 };
 
-export default Login;
+export default LoginDabba;

@@ -61,9 +61,11 @@ const Navbar = () => {
               <div className="p-2 flex">
                 <FaShoppingBag />
               </div>
+              
+
 
               <NavLink className={"p-1"} to="/login">
-                Login/
+                Login  /
               </NavLink>
               <NavLink className={"p-1"} to="/signup">
                 Sign up
