@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 const SignupDabba = () => {
-  // State management for form fields and working days
   const [formData, setFormData] = useState({
     ownerName: '',
     restaurantName: '',
@@ -11,6 +10,8 @@ const SignupDabba = () => {
     meals: [],
     panCard: '',
     workingDays: [],
+    bankIFSC: '', // New state for Bank IFSC Code
+    bankAccount: '', // New state for Bank Account Number
   });
 
   const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
@@ -69,7 +70,9 @@ const SignupDabba = () => {
   return (
     <div className="bg-gray-100 min-h-screen flex items-center justify-center p-4">
       <div className="bg-white p-6 rounded-lg shadow-md w-full max-w-lg">
-      <h2 className="text-2xl font-semibold mb-6 text-gray-800 flex items-center justify-center">Owner's Detail </h2>
+        <h2 className="text-2xl font-semibold mb-6 text-gray-800 flex items-center justify-center">
+          Owner's Detail
+        </h2>
         <form onSubmit={handleSubmit}>
           {/* Owner's Name */}
           <div className="mb-4">
@@ -192,6 +195,32 @@ const SignupDabba = () => {
                 </label>
               ))}
             </div>
+          </div>
+
+          {/* Bank IFSC Code */}
+          <div className="mb-4">
+            <input
+              type="text"
+              name="bankIFSC"
+              placeholder="Bank IFSC Code"
+              value={formData.bankIFSC}
+              onChange={handleChange}
+              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+              required
+            />
+          </div>
+
+          {/* Bank Account Number */}
+          <div className="mb-4">
+            <input
+              type="text"
+              name="bankAccount"
+              placeholder="Bank Account Number"
+              value={formData.bankAccount}
+              onChange={handleChange}
+              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+              required
+            />
           </div>
 
           {/* Submit Button */}
