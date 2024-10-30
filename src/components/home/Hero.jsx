@@ -8,10 +8,10 @@ const Hero = () => {
       style={{ backgroundImage: "url('/images/bg.png')" }}
     >
       <div className="left text-center md:text-left">
-        <h1 className="font-bold text-6xl md:text-8xl lg:text-9xl">
+        <h1 className="font-bold text-4xl md:text-8xl lg:text-8xl">
           Lunch <span className="text-red-500 font-bold">Box</span>
         </h1>
-        <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold p-4">
+        <h2 className="text-2xl md:text-4xl lg:text-4xl font-semibold p-4">
           Delicious Food at your <br /> doorstep
         </h2>
         <div className="flex pt-6 h-12 md:h-16 w-full max-w-md mx-auto md:mx-0">

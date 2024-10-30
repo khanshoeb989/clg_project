@@ -1,50 +1,65 @@
 import React from 'react';
-
-
-import { FaFacebook } from 'react-icons/fa';
+import { FaFacebook, FaTwitter } from 'react-icons/fa';
 import { RiInstagramFill } from 'react-icons/ri';
-import { FaTwitter } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
-
 
 const Footer = () => {
   return (
-    <>
-      <div className="flex flex-col items-center bg-green-600 p-4">
-        <div className="flex space-x-6 text-white mb-4">
-          <NavLink ><FaFacebook /></NavLink>
-          <NavLink><RiInstagramFill /></NavLink>
-          <NavLink><FaTwitter /></NavLink>
+    <footer className="bg-green-700 text-white py-12">
+      <div className="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6 items-center text-center lg:text-left">
+        {/* Social Media Links */}
+        <div className="flex flex-col items-center space-y-4">
+          <h2 className="text-2xl font-semibold">Follow us</h2>
+          <div className="flex space-x-4">
+            <NavLink>
+              <FaTwitter className="text-white text-4xl bg-white/20 p-2 rounded-full" />
+            </NavLink>
+            <NavLink>
+              <RiInstagramFill className="text-white text-4xl bg-white/20 p-2 rounded-full" />
+            </NavLink>
+            <NavLink>
+              <FaFacebook className="text-white text-4xl bg-white/20 p-2 rounded-full" />
+            </NavLink>
+          </div>
         </div>
-        <div className="mb-4">
-          <ul className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-6 text-white text-center">
+
+        {/* Navigation Links */}
+        <div className="flex flex-col items-center space-y-2">
+          <h2 className="text-lg font-semibold text-red-300 mb-4">Page</h2>
+          <ul className="space-y-2">
             <li>
-            <NavLink to="/">Home</NavLink>
+              <NavLink to="/" className="hover:text-red-300">Home</NavLink>
             </li>
             <li>
-            <NavLink to="/about">About us</NavLink>
+              <NavLink to="/about" className="hover:text-red-300">About us</NavLink>
             </li>
             <li>
-            <NavLink to="/contactus">Contact us</NavLink>
+              <NavLink to="/contactus" className="hover:text-red-300">Contact us</NavLink>
             </li>
             <li>
-            <NavLink to="/foodblog">Food blog</NavLink>
+              <NavLink to="/foodblog" className="hover:text-red-300">Food blog</NavLink>
             </li>
           </ul>
         </div>
-        <div className="flex flex-col sm:flex-row justify-center items-center text-center text-white p-4 border-t border-white w-full">
-          <h1 className="px-2">&copy; 2024 Lunch-Box. All rights reserved.</h1>
-          <h1 className="px-2">
-            <NavLink>Terms and Conditions</NavLink>
-          </h1>
-          <h1 className="px-2">
-            
-            <NavLink>Privacy and Policy</NavLink>
-            
-          </h1>
+
+        {/* Contact Information */}
+        <div className="flex flex-col items-center lg:items-start space-y-2">
+          <h2 className="text-lg font-semibold text-red-300 mb-4">Get in touch</h2>
+          
+          <p>abc@example.com</p>
+          <p>+123 4567 8901</p>
         </div>
       </div>
-    </>
+
+      {/* Copyright and Terms */}
+      <div className="text-center mt-8 border-t border-white/20 pt-6">
+        <p className="text-white/70">&copy; 2024 Lunch-Box. All rights reserved.</p>
+        <div className="flex justify-center space-x-6 mt-2">
+          <NavLink className="hover:text-red-300">Terms and Conditions</NavLink>
+          <NavLink className="hover:text-red-300">Privacy and Policy</NavLink>
+        </div>
+      </div>
+    </footer>
   );
 };
 
