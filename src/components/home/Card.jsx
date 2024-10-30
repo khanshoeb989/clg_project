@@ -11,7 +11,7 @@ const Card = () => {
   return (
     <>
       <div className="flex justify-center pb-3">
-        <button className="mt-8 mb-6 w-48 h-12 text-white rounded-xl bg-green-600 font-semibold text-lg">
+        <button className="mt-8 mb-6 w-48 h-12 text-white rounded-xl bg-[#4CAF50] font-semibold text-lg">
           Online Order
         </button>
       </div>
@@ -29,7 +29,7 @@ const Card = () => {
                 alt={elem.name}
               />
             </div>
-            <button className="text-base md:text-lg flex justify-center items-center bg-green-600 h-10 text-white rounded-b-md w-full">
+            <button className="text-base md:text-lg flex justify-center items-center bg-[#4CAF50] h-10 text-white rounded-b-md w-full">
               
               <NavLink to="/foodservicelisting">{elem.name}</NavLink>
             </button>

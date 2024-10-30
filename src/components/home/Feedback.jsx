@@ -23,7 +23,7 @@ const Feedback = () => {
         />
         <button 
           type="submit"
-          className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out"
+          className="w-full bg-[#4CAF50] hover:bg-green-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out"
         >
           Submit Feedback
         </button>

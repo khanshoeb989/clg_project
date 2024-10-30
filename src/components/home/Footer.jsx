@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-green-700 text-white py-12">
+    <footer className=" bg-[#4CAF50] text-white py-12">
       <div className="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6 items-center text-center lg:text-left">
         {/* Social Media Links */}
         <div className="flex flex-col items-center space-y-4">
@@ -25,7 +25,7 @@ const Footer = () => {
 
         {/* Navigation Links */}
         <div className="flex flex-col items-center space-y-2">
-          <h2 className="text-lg font-semibold text-red-300 mb-4">Page</h2>
+          <h2 className="text-2xl font-semibold text-red-300 mb-4">Page</h2>
           <ul className="space-y-2">
             <li>
               <NavLink to="/" className="hover:text-red-300">Home</NavLink>
@@ -44,7 +44,7 @@ const Footer = () => {
 
         {/* Contact Information */}
         <div className="flex flex-col items-center lg:items-start space-y-2">
-          <h2 className="text-lg font-semibold text-red-300 mb-4">Get in touch</h2>
+          <h2 className="text-2xl font-semibold text-red-300 mb-4">Get in touch</h2>
           
           <p>abc@example.com</p>
           <p>+123 4567 8901</p>

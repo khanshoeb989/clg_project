@@ -30,7 +30,7 @@ const Blogcard = () => {
         {data.map((elem, index) => {
           return (
             <div className="p-4 w-[400px] h-[350px] flex flex-col ml-40" key={index}>
-              <div className="bg-green-200 flex flex-col p-4 rounded-md h-[450px]">
+              <div className="bg-[#f1e8cb] flex flex-col p-4 rounded-md h-[450px]">
                 <div className=" font-semibold">{elem.date}</div>
                 <div>
                   <img src={elem.img} alt="Blog" className="w-full h-52 object-cover rounded-md" />
