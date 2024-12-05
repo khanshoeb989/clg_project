@@ -59,7 +59,7 @@ const Login = () => {
             />
           </div>
           <div className=" ml-3 mt-0">
-          <p className="text-gray-600"> <NavLink to="/signup" className="text-green-500 hover:underline">  Forgot password?</NavLink> .</p>
+          <p className="text-gray-600"> <NavLink to="/forgotpassword" className="text-green-500 hover:underline">  Forgot password?</NavLink> .</p>
         </div>
           <button
             type="submit"

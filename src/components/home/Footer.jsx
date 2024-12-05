@@ -26,7 +26,7 @@ const Footer = () => {
         {/* Navigation Links */}
         <div className="flex flex-col items-center space-y-2">
           <h2 className="text-2xl font-semibold text-red-300 mb-4">Page</h2>
-          <ul className="space-y-2">
+          <ul className="space-y-2 pl-5">
             <li>
               <NavLink to="/" className="hover:text-red-300">Home</NavLink>
             </li>
@@ -46,8 +46,8 @@ const Footer = () => {
         <div className="flex flex-col items-center lg:items-start space-y-2">
           <h2 className="text-2xl font-semibold text-red-300 mb-4">Get in touch</h2>
           
-          <p>abc@example.com</p>
-          <p>+123 4567 8901</p>
+          <p>Lunchbox.com</p>
+          <p>+91 7028747731</p>
         </div>
       </div>
 

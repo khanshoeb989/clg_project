@@ -10,6 +10,8 @@ import FoodServiceListing from '../pages/FoodServiceListing'
 import MealSummaryForm from '../pages/MealSummaryForm'
 import LoginDabba from '../pages/LoginDabba'
 import SignupDabba from '../pages/SignupDabba'
+import Restaurantinfo from '../pages/Restaurantinfo'
+import Forgotpassword from '../pages/Forgotpassword'
 
 const Routing = () => {
   return (
@@ -25,6 +27,10 @@ const Routing = () => {
             <Route path='/mealsummary' element={<MealSummaryForm/>}></Route>
             <Route path='/logindabba' element={<LoginDabba/>}></Route>
             <Route path='/signupdabba' element={<SignupDabba/>}></Route>
+            <Route path='/restaurant/:id' element={<Restaurantinfo/>}></Route>
+            <Route path='/forgotpassword' element={<Forgotpassword/>}></Route>
+
+
             
         </Routes>
     </div>

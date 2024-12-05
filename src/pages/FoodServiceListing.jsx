@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { Search, Star } from 'lucide-react'; // Import Star icon
+import { FaInfoCircle } from "react-icons/fa";
 
 const FoodServiceListing = () => {
   const [activeCategory, setActiveCategory] = useState('Breakfast');
   const [searchPincode, setSearchPincode] = useState('');
+  const navigate = useNavigate();
 
   const categories = ['Breakfast', 'Lunch', 'Dinner'];
 
@@ -129,17 +131,28 @@ const FoodServiceListing = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {filteredServices.length > 0 ? (
           filteredServices.map((service) => (
-            <NavLink
+            <div
               key={service.id}
-              to="/mealsummary"
-              className="bg-orange-100 p-4 rounded-md block hover:bg-orange-200 transition-colors"
+              className="bg-orange-100 p-4 rounded-md hover:bg-orange-200 transition-colors cursor-pointer"
+              onClick={() => navigate('/mealsummary')}
             >
-              <h3 className="font-bold">{service.name}</h3>
+              <div className="flex justify-between items-center">
+                <h3 className="font-bold">{service.name}</h3>
+                <button 
+                  onClick={(e) => {
+                    e.stopPropagation(); // Prevent card click from triggering
+                    navigate(`/restaurant/${service.id}`); // Navigate to restaurant info
+                  }}
+                >
+                  <FaInfoCircle />
+                  
+                </button>
+              </div>
               <p className="text-sm">Location: {service.location}</p>
               <p className="text-sm text-green-600 mt-2">{service.description}</p>
               {/* Star Ratings */}
               <div className="mt-3">{renderStars(service.rating)}</div>
-            </NavLink>
+            </div>
           ))
         ) : (
           <p className="text-center text-gray-500">
