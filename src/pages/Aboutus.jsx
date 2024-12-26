@@ -4,7 +4,25 @@ const Aboutus = () => {
   return (
     <div>
       <h1 className=' flex justify-center items-center font-bold text-2xl text-green-700'>About Us</h1>
-      <h2 className=' p-10 px-28'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus amet magnam expedita ipsa cumque est iure vel, voluptatem molestias in, quod velit deserunt ipsum debitis autem blanditiis minima maxime ut dolorem ex eveniet nihil quas. Fugit et dolorum error illum autem reiciendis? Inventore culpa et error obcaecati deserunt minima adipisci quibusdam sit quam similique molestias veniam commodi velit sequi, eveniet, magnam nesciunt optio in quae, iusto totam esse? Earum aliquam ut delectus dolorum repellendus quibusdam vel enim ex laborum velit aut porro asperiores, voluptate possimus deleniti a molestias fugiat doloremque aliquid officiis vitae nobis, dignissimos ratione. Consequatur ut aspernatur quidem, illum, corrupti dicta excepturi officiis blanditiis, doloribus eos non libero exercitationem? Aliquid, neque itaque vero repudiandae commodi nam numquam. Pariatur ducimus, voluptas sunt, nobis dolores dolor tempore dignissimos a minus vitae tenetur necessitatibus recusandae ipsum! Commodi error fuga dignissimos placeat rerum molestias quam blanditiis ipsum. Atque quisquam eveniet iure inventore, rerum aspernatur voluptates provident ratione velit itaque facilis eaque dolores distinctio voluptatem! Odio sunt officiis aspernatur vero voluptas qui, amet sit tenetur labore deserunt enim harum facilis perspiciatis aperiam natus doloribus porro perferendis nisi exercitationem accusantium assumenda tempore laborum dolore! Ullam laboriosam quam, deserunt maxime voluptatem unde maiores! Dolores odio sed sapiente commodi, harum nobis ipsa molestiae quod? Beatae quae nulla quasi officiis magnam modi ipsum cupiditate ex eaque, libero quod optio tenetur esse soluta. Libero iusto eaque corrupti aperiam eius harum obcaecati tenetur doloribus fuga ducimus? Quasi illo, suscipit corporis culpa iste ut placeat at repellat dicta odit, fuga ipsa labore similique reprehenderit! Temporibus ut deserunt sit illum adipisci veritatis aspernatur, illo facilis laborum itaque quia nemo tempora! Ratione ipsa officiis modi alias, quia expedita laborum nesciunt eos laboriosam corporis. Unde ut alias perspiciatis deserunt optio quibusdam repellendus vitae eum iure voluptates obcaecati, iste laborum quasi explicabo sed assumenda.</h2>
+      <h2 className=' p-10 px-28'>
+      <h1 className=' text-xl font-bold'>The Art of Home-Cooked Meals: Nourishing Body and Soul</h1>
+In a world filled with quick fixes and fast food, the importance of a home-cooked meal cannot be overstated. It’s more than just food; it’s an act of care, a celebration of health, and a connection to tradition. <br />
+
+<h1 className=' text-xl font-bold'>Why Home-Cooked Meals Matter</h1> 
+<h1 className=' text-xl font-bold'></h1>Health and Nutrition:
+Cooking at home allows you to control ingredients and portion sizes, ensuring a balanced diet rich in nutrients. It’s an opportunity to avoid processed additives and focus on fresh, wholesome ingredients that fuel your body and mind.<br />
+
+<h1 className=' text-xl font-bold'>Emotional Well-Being:</h1>
+Preparing and sharing meals with loved ones fosters connection and mindfulness. The process of cooking can be therapeutic, offering a sense of accomplishment and joy in creating something from scratch.<br />
+
+<h1 className=' text-xl font-bold'>Cost-Effective and Sustainable:</h1>
+Beyond health benefits, home-cooked meals are lighter on the wallet and often lead to less food waste. Planning and cooking at home help make thoughtful choices that are both economical and environmentally friendly.<br />
+
+<h1 className=' text-xl font-bold'>Cultural and Personal Identity:</h1> 
+Cooking at home preserves family recipes and traditions, keeping cultural roots alive. Each dish becomes a story, carrying memories and values that are passed down through generations.<br />
+
+
+      </h2>
     </div>
   )
 }

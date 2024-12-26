@@ -144,7 +144,7 @@ const FoodServiceListing = () => {
                     navigate(`/restaurant/${service.id}`); // Navigate to restaurant info
                   }}
                 >
-                  <FaInfoCircle />
+                  <FaInfoCircle size={26} /> 
                   
                 </button>
               </div>

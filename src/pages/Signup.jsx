@@ -86,6 +86,22 @@ return (
             placeholder="Enter your password"
             required
           />
+          
+        </div>
+        <div>
+          
+          
+          <input
+          
+            type="address"
+            id="address"
+            name="address"
+            value={formData.address}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+            placeholder="Enter your address"
+            required
+          />
         </div>
         <button
           type="submit"
