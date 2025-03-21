@@ -18,14 +18,13 @@ const Contactus = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex justify-around px-8 py-4">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg">
-        <h2 className="text-2xl font-semibold mb-6 text-gray-800">
-          Contact Us
-        </h2>
+    <div className="min-h-screen bg-gray-100 flex flex-col lg:flex-row justify-center items-center px-4 py-8 lg:px-8 lg:py-12 font-title3">
+      {/* Contact Form */}
+      <div className="bg-white p-6 lg:p-8 rounded-lg shadow-lg w-full max-w-lg mb-8 lg:mb-0 lg:mr-8">
+        <h2 className="text-2xl font-semibold mb-6 text-green-800">Contact Us</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-gray-700" htmlFor="name">
+            <label className="block text-gray-700 mb-2" htmlFor="name">
               Name
             </label>
             <input
@@ -34,12 +33,12 @@ const Contactus = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
               required
             />
           </div>
           <div>
-            <label className="block text-gray-700" htmlFor="email">
+            <label className="block text-gray-700 mb-2" htmlFor="email">
               Email
             </label>
             <input
@@ -48,12 +47,12 @@ const Contactus = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
               required
             />
           </div>
           <div>
-            <label className="block text-gray-700" htmlFor="subject">
+            <label className="block text-gray-700 mb-2" htmlFor="subject">
               Subject
             </label>
             <input
@@ -62,12 +61,12 @@ const Contactus = () => {
               name="subject"
               value={formData.subject}
               onChange={handleChange}
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
               required
             />
           </div>
           <div>
-            <label className="block text-gray-700" htmlFor="message">
+            <label className="block text-gray-700 mb-2" htmlFor="message">
               Message
             </label>
             <textarea
@@ -75,7 +74,7 @@ const Contactus = () => {
               name="message"
               value={formData.message}
               onChange={handleChange}
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
               rows="5"
               required
             ></textarea>
@@ -88,11 +87,13 @@ const Contactus = () => {
           </button>
         </form>
       </div>
-      <div className="image">
+
+      {/* Image Section */}
+      <div className="w-full max-w-lg lg:max-w-none">
         <img
           src="/images/customer support.png"
           alt="Customer Support"
-          className="w-96 h-[500px] object-cover"
+          className="w-full h-auto lg:w-96 lg:h-[500px] object-cover rounded-lg shadow-lg"
         />
       </div>
     </div>

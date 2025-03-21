@@ -11,8 +11,8 @@ const Feedback = () => {
   };
 
   return (
-    <div className="max-w-xl mx-auto p-6 bg-green-50 rounded-lg shadow-md mt-5 mb-5">
-      <h2 className="text-2xl font-bold mb-4 text-green-800">Any Feedback?</h2>
+    <div className="max-w-xl mx-auto p-4 sm:p-6 bg-green-50 rounded-lg shadow-md mt-5 mb-5 font-title">
+      <h2 className="text-xl sm:text-2xl font-bold mb-4 text-green-800">Any Feedback?</h2>
       <form onSubmit={handleSubmit}>
         <textarea
           value={feedback}

@@ -1,4 +1,3 @@
-// CustomerSlider.js
 import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -31,12 +30,29 @@ const CustomerSlider = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1024, // For tablets and smaller desktops
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768, // For mobile devices
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false, // Hide dots on smaller screens for cleaner UI
+        },
+      },
+    ],
   };
 
   return (
-    <div className="max-w-2xl mx-auto text-center py-10">
-      <h2 className="text-2xl font-bold mb-4">
-        <span className="text-3xl">“</span> Our Customers <span className="text-3xl">”</span>
+    <div className="max-w-2xl mx-auto text-center py-10 px-4 font-title">
+      <h2 className="text-2xl sm:text-3xl font-bold mb-6">
+        <span className="text-4xl">“</span> Our Customers <span className="text-4xl">”</span>
       </h2>
       <Slider {...settings}>
         {customers.map((customer) => (
@@ -44,9 +60,9 @@ const CustomerSlider = () => {
             <img
               src={customer.img}
               alt={customer.name}
-              className="rounded-full mx-auto w-40 h-40 object-cover"
+              className="rounded-full mx-auto w-32 h-32 sm:w-40 sm:h-40 object-cover"
             />
-            <h3 className="mt-4 font-semibold text-lg">{customer.name}</h3>
+            <h3 className="mt-4 font-semibold text-lg sm:text-xl">{customer.name}</h3>
           </div>
         ))}
       </Slider>

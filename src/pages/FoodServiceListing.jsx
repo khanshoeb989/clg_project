@@ -14,7 +14,7 @@ const FoodServiceListing = () => {
   const services = [
     {
       id: 1,
-      name: 'Tiffin Daddy',
+      name: 'Z&S',
       location: 'Pune, 411016',
       description: 'Provides 2 meals per day quality food. Bulk orders are also available.',
       category: 'Breakfast',
@@ -23,7 +23,7 @@ const FoodServiceListing = () => {
     },
     {
       id: 2,
-      name: 'Tiffin Service by Home Chefs',
+      name: 'Dharminos',
       location: 'Pune, 411016',
       description: 'Offers a variety of home-cooked meals delivered to your doorstep.',
       category: 'Lunch',
@@ -32,7 +32,7 @@ const FoodServiceListing = () => {
     },
     {
       id: 3,
-      name: 'Dabba Express',
+      name: 'Z&S',
       location: 'Lonavala, 410401',
       description: 'Specializes in quick delivery of traditional Indian meals.',
       category: 'Lunch',
@@ -41,7 +41,7 @@ const FoodServiceListing = () => {
     },
     {
       id: 4,
-      name: 'Tiffin Box',
+      name: 'Z&S',
       location: 'Pune, 411016',
       description: 'Provides healthy and nutritious meals for working professionals.',
       category: 'Dinner',
@@ -50,7 +50,7 @@ const FoodServiceListing = () => {
     },
     {
       id: 5,
-      name: 'Ghar Ka Khana',
+      name: 'Dharminos',
       location: 'Lonavala, 410401',
       description: 'Focuses on homemade-style meals, catering to various dietary preferences.',
       category: 'Breakfast',
@@ -59,7 +59,7 @@ const FoodServiceListing = () => {
     },
     {
       id: 6,
-      name: 'Tiffinwala',
+      name: 'Dharminos',
       location: 'Lonavala, 410401',
       description: 'Offers a subscription-based service for daily meal deliveries.',
       category: 'Dinner',
@@ -82,7 +82,7 @@ const FoodServiceListing = () => {
     const emptyStars = 5 - fullStars - (halfStar ? 1 : 0); // Remaining empty stars
 
     return (
-      <div className="flex items-center space-x-1">
+      <div className="flex items-center space-x-1 ">
         {Array(fullStars)
           .fill()
           .map((_, index) => (
@@ -99,7 +99,7 @@ const FoodServiceListing = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-4 min-h-screen flex flex-col">
+    <div className="max-w-4xl mx-auto p-4 min-h-screen flex flex-col font-title3 text-xl">
       {/* Category Selection Buttons */}
       <div className="flex space-x-2 mb-4">
         {categories.map((category) => (
