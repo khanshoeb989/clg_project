@@ -50,7 +50,7 @@ const CustomerSlider = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto text-center py-10 px-4 font-title">
+    <div className="max-w-2xl mx-auto text-center py-10 px-4 font-title " >
       <h2 className="text-2xl sm:text-3xl font-bold mb-6">
         <span className="text-4xl">“</span> Our Customers <span className="text-4xl">”</span>
       </h2>

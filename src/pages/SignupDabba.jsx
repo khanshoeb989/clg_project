@@ -51,7 +51,7 @@ const SignupDabba = () => {
   };
 
   return (
-    <div className="bg-gray-50 min-h-screen flex items-center justify-center p-4 font-title3">
+    <div className="bg-gradient-to-br from-green-50 to-green-100 min-h-screen flex items-center justify-center p-4 font-title3">
       <div className="bg-white p-6 md:p-8 rounded-lg shadow-lg w-full max-w-2xl">
         <h2 className="text-2xl md:text-3xl font-bold text-center text-green-600 mb-6">
           Owner's Detail

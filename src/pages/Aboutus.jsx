@@ -3,7 +3,7 @@ import { GiMeal, GiHealthPotion, GiHeartPlus, GiMoneyStack, GiFamilyHouse } from
 
 const Aboutus = () => {
   return (
-    <div className="bg-green-50 min-h-screen py-10 px-4 sm:px-8 lg:px-16">
+    <div className="bg-gradient-to-br from-green-50 to-green-100 min-h-screen py-10 px-4 sm:px-8 lg:px-16">
       {/* Heading */}
       <h1 className="text-center font-bold text-3xl sm:text-4xl lg:text-5xl text-green-700 mb-8 font-custom font-title2">
         About Us

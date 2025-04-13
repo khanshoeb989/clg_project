@@ -10,12 +10,12 @@ const Card = () => {
 
   return (
     <>
-      <div className="flex justify-center pb-3 font-title3">
+      <div className="flex justify-center pb-3 font-title3 bg-gradient-to-br from-green-50 to-green-100 ">
         <button className="mt-8 mb-6 w-48 h-12 text-white rounded-xl bg-[#4CAF50] font-semibold text-lg hover:bg-[#45a049] transition-colors">
           Online Order
         </button>
       </div>
-      <div className="flex flex-col md:flex-row justify-center items-center gap-8 px-4 pb-4 font-title3 text-2xl
+      <div className="flex flex-col md:flex-row justify-center items-center gap-8 px-4 pb-4 font-title3 text-2xl bg-gradient-to-br from-green-50 to-green-100
       ">
         {data.map((elem, index) => (
           <div

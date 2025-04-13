@@ -94,12 +94,7 @@ const Navbar = () => {
 
             {/* Cart & Login/Signup */}
             <li className="flex items-center space-x-3">
-              <NavLink to="/cart" className="relative p-1 hover:text-green-600">
-                <FaShoppingBag className="text-xl text-green-600 hover:text-green-700 transition-colors" />
-                <span className="absolute -top-2 -right-2 bg-green-500 text-white text-xs rounded-full px-1.5 py-0.5">
-                  3 {/* Replace with dynamic cart count */}
-                </span>
-              </NavLink>
+              
               <NavLink to="/login" className="p-1 hover:text-green-600 transition-colors">
                 Login /
               </NavLink>
