@@ -12,6 +12,16 @@ const SignupDabba = () => {
     workingDays: [],
     bankIFSC: '',
     bankAccount: '',
+    menus: {
+      Breakfast: '',
+      Lunch: '',
+      Dinner: '',
+    },
+    foodPhotos: {
+      Breakfast: [],
+      Lunch: [],
+      Dinner: [],
+    },
   });
 
   const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
@@ -45,9 +55,48 @@ const SignupDabba = () => {
     }));
   };
 
+  const handleMenuChange = (meal, value) => {
+    setFormData((prev) => ({
+      ...prev,
+      menus: {
+        ...prev.menus,
+        [meal]: value,
+      },
+    }));
+  };
+
+  const handlePhotoUpload = (meal, files) => {
+    setFormData((prev) => ({
+      ...prev,
+      foodPhotos: {
+        ...prev.foodPhotos,
+        [meal]: Array.from(files),
+      },
+    }));
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+    const data = new FormData();
+
+    Object.entries(formData).forEach(([key, value]) => {
+      if (typeof value === 'object' && !Array.isArray(value)) {
+        Object.entries(value).forEach(([subKey, subVal]) => {
+          if (Array.isArray(subVal)) {
+            subVal.forEach((file) => data.append(`foodPhotos[${subKey}][]`, file));
+          } else {
+            data.append(`${key}[${subKey}]`, subVal);
+          }
+        });
+      } else if (Array.isArray(value)) {
+        value.forEach((item) => data.append(`${key}[]`, item));
+      } else {
+        data.append(key, value);
+      }
+    });
+
+    // For demo
+    console.log('Form submitted:', formData);
   };
 
   return (
@@ -58,6 +107,7 @@ const SignupDabba = () => {
         </h2>
 
         <form onSubmit={handleSubmit} className="space-y-4">
+
           {/* Owner & Restaurant Details */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <input
@@ -117,7 +167,13 @@ const SignupDabba = () => {
             <div className="flex flex-wrap gap-4">
               {['Breakfast', 'Lunch', 'Dinner'].map((meal) => (
                 <label key={meal} className="flex items-center space-x-2">
-                  <input type="checkbox" value={meal} onChange={handleMealChange} className="checkbox" />
+                  <input
+                    type="checkbox"
+                    value={meal}
+                    onChange={handleMealChange}
+                    checked={formData.meals.includes(meal)}
+                    className="checkbox"
+                  />
                   <span>{meal}</span>
                 </label>
               ))}
@@ -139,14 +195,23 @@ const SignupDabba = () => {
           <div className="border p-4 rounded-lg">
             <div className="flex justify-between items-center mb-3">
               <h3 className="font-semibold text-gray-700">Working Days</h3>
-              <button type="button" onClick={handleSelectAll} className="text-green-500 hover:underline">
+              <button
+                type="button"
+                onClick={handleSelectAll}
+                className="text-green-500 hover:underline"
+              >
                 {formData.workingDays.length === daysOfWeek.length ? 'Deselect all' : 'Select all'}
               </button>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
               {daysOfWeek.map((day) => (
                 <label key={day} className="flex items-center space-x-2">
-                  <input type="checkbox" checked={formData.workingDays.includes(day)} onChange={() => handleDayChange(day)} className="checkbox" />
+                  <input
+                    type="checkbox"
+                    checked={formData.workingDays.includes(day)}
+                    onChange={() => handleDayChange(day)}
+                    className="checkbox"
+                  />
                   <span>{day}</span>
                 </label>
               ))}
@@ -175,8 +240,46 @@ const SignupDabba = () => {
             />
           </div>
 
+          {/* Meal Menus and Image Uploads */}
+          {formData.meals.map((meal) => (
+            <div key={meal} className="border p-4 rounded-lg bg-gray-50">
+              <h4 className="font-semibold text-green-600 mb-2">{meal} Menu & Photos</h4>
+
+              <textarea
+                placeholder={`Enter ${meal} menu...`}
+                value={formData.menus[meal]}
+                onChange={(e) => handleMenuChange(meal, e.target.value)}
+                className="input-field w-full"
+              />
+
+              <input
+                type="file"
+                accept="image/*"
+                multiple
+                onChange={(e) => handlePhotoUpload(meal, e.target.files)}
+                className="mt-2"
+              />
+
+              {/* Image Previews */}
+              <div className="flex flex-wrap gap-2 mt-2">
+                {formData.foodPhotos[meal]?.map((file, index) => (
+                  <div key={index} className="w-20 h-20 border rounded overflow-hidden">
+                    <img
+                      src={URL.createObjectURL(file)}
+                      alt={`preview-${meal}-${index}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+
           {/* Submit Button */}
-          <button type="submit" className="w-full bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition">
+          <button
+            type="submit"
+            className="w-full bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition"
+          >
             Submit
           </button>
         </form>
